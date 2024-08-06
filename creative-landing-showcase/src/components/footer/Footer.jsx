@@ -26,10 +26,10 @@ const Footer = () => {
         className="flex h-auto bg-cover "
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-        <div className="max-w-screen-lg mx-auto ">
+        <div className="max-w-screen-lg mx-auto my-10 font-jakarta ">
           {/* section  */}
           <div className="flex-row mt-10 md:flex ">
-            <div className="space-y-5 md:w-4/12 font-jakarta">
+            <div className="space-y-5 md:w-4/12 ">
               <img src={f01} alt="" />
               <p>
                 Global Edulink offers accessible, high-quality online education
@@ -51,8 +51,8 @@ const Footer = () => {
             </div>
 
             <div className="grid grid-cols-2 mx-10 md:w-8/12 md:grid-cols-4">
-              <div className="flex flex-col">
-                <h1>Resources</h1>
+              <div className="flex flex-col space-y-4">
+                <h1 className="font-bold">Resources</h1>
 
                 <div>
                   <h1>Free Courses</h1>
@@ -64,8 +64,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col">
-                <h1>Quick Links</h1>
+              <div className="flex flex-col space-y-4">
+                <h1 className="font-bold">Quick Links</h1>
 
                 <div>
                   <h1>Become an Instructor</h1>
@@ -78,8 +78,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col">
-                <h1>Support</h1>
+              <div className="flex flex-col space-y-4">
+                <h1 className="font-bold">Support</h1>
 
                 <div>
                   <h1>FAQ</h1>
@@ -93,8 +93,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col">
-                <h1>Contact Info</h1>
+              <div className="flex flex-col space-y-4">
+                <h1 className="font-bold">Contact Info</h1>
 
                 <div>
                   <h1>+4420-3409-7966</h1>

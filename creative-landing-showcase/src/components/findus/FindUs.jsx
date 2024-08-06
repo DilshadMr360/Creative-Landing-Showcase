@@ -31,7 +31,7 @@ const FindUs = () => {
 
   return (
     <div className='container'>
-      <div className='max-w-screen-lg mx-auto border border-red-500'>
+      <div className='max-w-screen-lg mx-auto '>
         <div className='flex flex-col items-center justify-center gap-2 mx-auto text-xl font-bold text-center font-jakarta'>
           <h1 className='w-4/12'>Find Your Perfect Fit: Dive into Our Diverse Categories</h1>
           <p className='w-6/12 text-sm font-normal'>Explore a variety of categories covering diverse topics, empowering you to expand your skills and knowledge base effectively.</p>

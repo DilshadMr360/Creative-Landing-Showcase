@@ -38,7 +38,7 @@ const AboutUs = () => {
         className="flex h-auto bg-cover "
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-      <div className="max-w-screen-lg mx-auto border border-red-500">
+      <div className="max-w-screen-lg mx-auto ">
         <div className="flex items-center justify-center mx-auto mb-10 space-y-10 text-xl font-bold text-center font-jakarta">
           <div className="flex flex-col items-center justify-center gap-2 mx-auto text-xl font-bold text-center font-jakarta">
             <h1 className="w-8/12">
