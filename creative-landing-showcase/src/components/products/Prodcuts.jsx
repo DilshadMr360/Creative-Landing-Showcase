@@ -4,6 +4,8 @@ import productImage1 from "../../assets/PM1.png";
 import productImage2 from "../../assets/PM2.png";
 import productImage3 from "../../assets/PM3.png";
 import productImage4 from "../../assets/PM4.png";
+import productImage5 from "../../assets/PM5.png";
+import productImage6 from "../../assets/PM6.png";
 import clock from "../../assets/clock.png";
 import check from "../../assets/check.png";
 import { FaArrowRight } from "react-icons/fa";
@@ -92,7 +94,7 @@ const Prodcuts = () => {
 
           {/* Grid Images Section */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            {[productImage1, productImage2, productImage3, productImage4].map((image, index) => (
+            {[productImage1, productImage2, productImage3, productImage4, productImage5, productImage6].map((image, index) => (
               <div key={index} className="px-4 py-2 space-y-5 bg-white rounded-lg font-jakarta">
                 <img src={image} alt={`Product ${index + 1}`} />
                 <h1 className="font-bold">
