@@ -11,6 +11,7 @@ export default {
         'dRed': '#F04706',
         'lGreen': '#4AC994',
         'lBlue': '#EFF4FF',
+        'lPink': '#FBF6F1',
        
       },
       fontFamily: {
