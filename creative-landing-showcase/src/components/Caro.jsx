@@ -1,0 +1,123 @@
+import React from 'react'
+import { Pagination } from 'swiper/modules';
+import {Swiper, SwiperSlide} from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import { HiStar } from 'react-icons/hi';
+import clock from "../assets/clock.png";
+
+const Caro = () => {
+  return (
+    <div className='container'>
+    <div className='max-w-screen-lg mx-auto border border-red-500'>
+    <div className='mt-[30px] lg:mt-[55px]'>
+      <Swiper 
+        modules={[Pagination]}
+        spaceBetween={30}
+        slidesPerView={1}
+        pagination={{clickable:true}}
+        breakpoints={{
+          640:{
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768:{
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024:{
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
+      >
+        <SwiperSlide>
+          <div className="py-[30px] px-5 rounded-[13px]">
+            <div className="flex items-center gap-[13px]">
+              <img src={clock} alt="" />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
+                <div className="flex items-center gap-[2px]">
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                </div>
+              </div>
+            </div>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              I have taken medical services from them. they treat so well and they are providing the best medicle services.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="py-[30px] px-5 rounded-[13px]">
+            <div className="flex items-center gap-[13px]">
+              <img src={clock} alt="" />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
+                <div className="flex items-center gap-[2px]">
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                </div>
+              </div>
+            </div>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              I have taken medical services from them. they treat so well and they are providing the best medicle services.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="py-[30px] px-5 rounded-[13px]">
+            <div className="flex items-center gap-[13px]">
+              <img src={clock} alt="" />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
+                <div className="flex items-center gap-[2px]">
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                </div>
+              </div>
+            </div>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              I have taken medical services from them. they treat so well and they are providing the best medicle services.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="py-[30px] px-5 rounded-[13px]">
+            <div className="flex items-center gap-[13px]">
+              <img src={clock} alt="" />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
+                <div className="flex items-center gap-[2px]">
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                  <HiStar className='text-yellow w-[18px] h-5'/>
+                </div>
+              </div>
+            </div>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              I have taken medical services from them. they treat so well and they are providing the best medicle services.
+            </p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+ 
+    </div>
+
+    </div>
+  )
+}
+
+export default Caro;

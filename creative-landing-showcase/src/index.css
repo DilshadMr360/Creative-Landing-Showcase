@@ -9,7 +9,7 @@
     
 @screen md {
     .container {
-      @apply  max-w-full border-2 border-black;
+      @apply  max-w-full ;
     }
 
 
