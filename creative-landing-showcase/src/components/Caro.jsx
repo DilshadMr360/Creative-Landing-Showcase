@@ -1,123 +1,72 @@
-import React from 'react'
-import { Pagination } from 'swiper/modules';
-import {Swiper, SwiperSlide} from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import { HiStar } from 'react-icons/hi';
-import clock from "../assets/clock.png";
+import React, { useState } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Caro = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 4;
+  const totalItems = 20;
+
+  const handleNext = () => {
+    if (currentIndex + 1 < totalItems) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex - 1 >= 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const progressPercentage = ((currentIndex + itemsPerPage) / totalItems) * 100;
+
   return (
     <div className='container'>
-    <div className='max-w-screen-lg mx-auto border border-red-500'>
-    <div className='mt-[30px] lg:mt-[55px]'>
-      <Swiper 
-        modules={[Pagination]}
-        spaceBetween={30}
-        slidesPerView={1}
-        pagination={{clickable:true}}
-        breakpoints={{
-          640:{
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
-          768:{
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024:{
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
-      >
-        <SwiperSlide>
-          <div className="py-[30px] px-5 rounded-[13px]">
-            <div className="flex items-center gap-[13px]">
-              <img src={clock} alt="" />
-              <div>
-                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
-                <div className="flex items-center gap-[2px]">
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                </div>
-              </div>
-            </div>
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have taken medical services from them. they treat so well and they are providing the best medicle services.
-            </p>
+      <div className='max-w-screen-lg mx-auto border border-red-500'>
+        <div className="flex flex-col items-center">
+          {/* Content */}
+          <div className="grid grid-cols-4 gap-4 mb-4">
+            {Array.from({ length: itemsPerPage }).map((_, index) => {
+              const itemIndex = currentIndex + index;
+              if (itemIndex < totalItems) {
+                return (
+                  <div key={index} className="p-4 bg-white rounded-lg shadow">
+                    {/* Replace with actual content */}
+                    <p>Content {itemIndex + 1}</p>
+                  </div>
+                );
+              }
+              return null;
+            })}
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="py-[30px] px-5 rounded-[13px]">
-            <div className="flex items-center gap-[13px]">
-              <img src={clock} alt="" />
-              <div>
-                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
-                <div className="flex items-center gap-[2px]">
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                </div>
-              </div>
-            </div>
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have taken medical services from them. they treat so well and they are providing the best medicle services.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="py-[30px] px-5 rounded-[13px]">
-            <div className="flex items-center gap-[13px]">
-              <img src={clock} alt="" />
-              <div>
-                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
-                <div className="flex items-center gap-[2px]">
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                </div>
-              </div>
-            </div>
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have taken medical services from them. they treat so well and they are providing the best medicle services.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="py-[30px] px-5 rounded-[13px]">
-            <div className="flex items-center gap-[13px]">
-              <img src={clock} alt="" />
-              <div>
-                <h4 className='text-[18px] leading-[30px] font-semibold text-heading'>Ravindu Umayanga</h4>
-                <div className="flex items-center gap-[2px]">
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                  <HiStar className='text-yellow w-[18px] h-5'/>
-                </div>
-              </div>
-            </div>
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have taken medical services from them. they treat so well and they are providing the best medicle services.
-            </p>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
- 
-    </div>
 
+          {/* Progress Bar and Navigation Buttons */}
+          <div className="flex items-center justify-between w-full max-w-xs">
+            <button
+              className="p-2 text-white bg-black rounded-full disabled:opacity-50"
+              onClick={handlePrev}
+              disabled={currentIndex === 0}
+            >
+              <FaChevronLeft />
+            </button>
+            <div className="relative w-full h-2 mx-4 overflow-hidden bg-gray-300 rounded-full">
+              <div
+                className="absolute h-full bg-black rounded-full"
+                style={{ width: `${progressPercentage}%` }}
+              ></div>
+            </div>
+            <button
+              className="p-2 text-white bg-black rounded-full disabled:opacity-50"
+              onClick={handleNext}
+              disabled={currentIndex + itemsPerPage >= totalItems}
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Caro;

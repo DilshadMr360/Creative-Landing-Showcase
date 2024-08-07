@@ -8,13 +8,13 @@ import productImage5 from "../../assets/PM5.png";
 import productImage6 from "../../assets/PM6.png";
 import clock from "../../assets/clock.png";
 import check from "../../assets/check.png";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 
-const Prodcuts = () => {
-  const [items, setItems] = useState([
+const Products = () => {
+  const [items] = useState([
     'All courses',
     'Project Management',
     'Business Management',
@@ -23,72 +23,75 @@ const Prodcuts = () => {
     'HR & Leadership'
   ]);
 
+  const [swiperRef, setSwiperRef] = useState(null);
+
   const scrollRight = () => {
-    setItems((prevItems) => {
-      const newItems = [...prevItems];
-      const firstItem = newItems.shift();
-      newItems.push(firstItem);
-      return newItems;
-    });
+    if (swiperRef) swiperRef.slideNext();
   };
 
   const scrollLeft = () => {
-    setItems((prevItems) => {
-      const newItems = [...prevItems];
-      const lastItem = newItems.pop();
-      newItems.unshift(lastItem);
-      return newItems;
-    });
+    if (swiperRef) swiperRef.slidePrev();
   };
 
   return (
     <div className="container">
       <div
-        className="flex h-auto bg-cover "
+        className="flex h-auto bg-cover"
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
         <div className="max-w-screen-lg mx-auto mt-40">
           {/* Carousel */}
-          <div className="relative flex items-center">
+          <div className="relative flex items-center my-10">
             {/* Left Arrow */}
-            <button onClick={scrollLeft} className="absolute left-0 z-10 p-2 text-white bg-black rounded-full">
-              ←
+            <button
+              className="absolute left-0 z-20 p-2 text-white bg-black rounded-full"
+              onClick={scrollLeft}
+              style={{ top: '50%', transform: 'translateY(-50%)' }}
+            >
+              <FaChevronLeft />
             </button>
 
             {/* Slider Container */}
             <Swiper
-              spaceBetween={10}
-              slidesPerView={4}
-              navigation={false}  // Disable default navigation
-              pagination={false}  // Disable default pagination
-              modules={[Navigation, Pagination, A11y]}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-                1280: {
-                  slidesPerView: 4,
-                },
-              }}
-            >
-              {items.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="px-4 py-2 bg-white border rounded-full">
-                    {item}
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+  onSwiper={setSwiperRef}
+  spaceBetween={10}
+  slidesPerView={1}  // Default to 1 slide per view on all screens
+  navigation={false}
+  pagination={false}
+  modules={[Navigation, Pagination, A11y]}
+  breakpoints={{
+    640: {
+      slidesPerView: 1, // 1 item on screens <= 640px
+    },
+    768: {
+      slidesPerView: 2, // 2 items on screens > 640px and <= 768px
+    },
+    1024: {
+      slidesPerView: 3, // 3 items on screens > 768px and <= 1024px
+    },
+    1280: {
+      slidesPerView: 4, // 4 items on screens > 1024px and above
+    },
+  }}
+  className="w-full" // Full width for the container
+>
+  {items.map((item, index) => (
+    <SwiperSlide key={index}>
+      <div className="px-4 py-2 text-center bg-white border rounded-full font-jakarta">
+        {item}
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
 
             {/* Right Arrow */}
-            <button onClick={scrollRight} className="absolute right-0 z-10 p-2 text-white bg-black ">
-              →
+            <button
+              className="absolute right-0 z-20 p-2 text-white bg-black rounded-full"
+              onClick={scrollRight}
+              style={{ top: '50%', transform: 'translateY(-50%)' }}
+            >
+              <FaChevronRight />
             </button>
           </div>
 
@@ -121,7 +124,7 @@ const Prodcuts = () => {
                 <div className="flex flex-row items-center justify-between w-full space-x-4 text-sm font-jakarta">
                   <h1 className="flex items-center space-x-2 font-bold font-jakarta">
                     <span>£1099</span>
-                    <span className="font-normal">1455</span>
+                    <span className="font-normal line-through">£1455</span>
                     <span>in full</span>
                   </h1>
                   <button className="flex items-center space-x-2 font-bold font-jakarta">
@@ -151,4 +154,4 @@ const Prodcuts = () => {
   );
 };
 
-export default Prodcuts;
+export default Products;
