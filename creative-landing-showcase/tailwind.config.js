@@ -12,6 +12,10 @@ export default {
         'lGreen': '#4AC994',
         'lBlue': '#EFF4FF',
         'lPink': '#FBF6F1',
+        'tBlue': '#E8DCFA',
+        'tYellow': '#FFF3CF',
+        'tDYellow': '#FFDA6E',
+
        
       },
       fontFamily: {
