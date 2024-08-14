@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import f1 from "../../assets/f1.png";
 import f2 from "../../assets/f2.png";
 import f3 from "../../assets/f3.png";
@@ -16,7 +16,28 @@ const FindUs = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 4;
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+
+  useEffect(() => {
+    // Function to update itemsPerPage based on screen size
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerPage(1);
+      } else {
+        setItemsPerPage(4);
+      }
+    };
+
+    // Initial call to set the correct itemsPerPage
+    updateItemsPerPage();
+
+    // Add event listener to handle window resize
+    window.addEventListener('resize', updateItemsPerPage);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', updateItemsPerPage);
+  }, []);
+
   const totalItems = items.length;
 
   const handleNext = () => {
@@ -37,25 +58,22 @@ const FindUs = () => {
   return (
     <div className='container'>
       <div className='max-w-screen-lg mx-auto '>
-        <div className='flex flex-col items-center justify-center gap-2 mx-auto text-xl font-bold text-center font-jakarta'>
-          <h1 className='w-4/12'>Find Your Perfect Fit: Dive into Our Diverse Categories</h1>
-          <p className='w-6/12 text-sm font-normal'>Explore a variety of categories covering diverse topics, empowering you to expand your skills and knowledge base effectively.</p>
+        <div className='flex flex-col items-center justify-center mx-auto space-y-10 text-xl font-bold text-center font-jakarta'>
+          <h1 className='w-4/12 mt-10'>Find Your Perfect Fit: Dive into Our Diverse Categories</h1>
+          <p className='mx-5 text-sm font-normal md:mx-0 md:w-6/12 '>Explore a variety of categories covering diverse topics, empowering you to expand your skills and knowledge base effectively.</p>
         </div>
       </div>
 
       {/* Carousel */}
-      <div className="flex flex-col items-center ">
+      <div className="flex flex-col items-center max-w-screen-lg mx-5 mt-10  md:mx-auto">
         {/* Content */}
-        <div className="grid w-full grid-cols-4 gap-4 mb-4 font-jakarta">
+        <div className={`grid w-full grid-cols-1 sm:grid-cols-4 gap-4 mb-4 font-jakarta`}>
           {items.slice(currentIndex, currentIndex + itemsPerPage).map((item, index) => (
             <div key={index} className="p-4 space-y-4 bg-white rounded-lg shadow">
               <img src={item.img} alt="" />
               <p className='text-xl font-bold'>{item.title}</p>
               <p>{item.description}</p>
             </div>
-            
-
-            
           ))}
         </div>
 

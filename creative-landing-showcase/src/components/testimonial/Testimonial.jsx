@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import backgroundImage2 from "../../assets/testimonail-bg.png";
 import t1 from "../../assets/t1.png";
@@ -90,7 +90,23 @@ const Testimonial = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 4;
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerPage(1);
+      } else {
+        setItemsPerPage(4);
+      }
+    };
+
+    updateItemsPerPage();
+    window.addEventListener('resize', updateItemsPerPage);
+
+    return () => window.removeEventListener('resize', updateItemsPerPage);
+  }, []);
+
   const totalItems = items.length;
 
   const handleNext = () => {
@@ -110,9 +126,9 @@ const Testimonial = () => {
   return (
     <div className="container">
       <div className="max-w-screen-lg mx-auto">
-        <div className="flex flex-col items-center justify-center gap-2 mx-auto text-xl font-bold text-center font-jakarta">
+        <div className="flex flex-col items-center justify-center gap-2 mx-auto mt-10 text-xl font-bold text-center font-jakarta">
           <h1>Client Testimonials</h1>
-          <p className="w-6/12 text-sm font-normal">
+          <p className="text-sm font-normal md:w-8/12">
             Hear Heart-warming Stories from Our Valued Customers Sharing Their
             Experience and Success with Our Services
           </p>
@@ -125,7 +141,7 @@ const Testimonial = () => {
         className="flex h-auto bg-cover "
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-        <div className="flex flex-col items-center w-full mt-20 ">
+        <div className="flex flex-col items-center max-w-screen-lg mx-auto mt-20 ">
           {/* Content */}
           <div className="grid w-full grid-cols-1 gap-4 mb-4 md:grid-cols-4">
             {/* Loop through items */}

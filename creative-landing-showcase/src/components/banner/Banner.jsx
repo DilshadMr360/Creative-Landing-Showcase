@@ -9,16 +9,16 @@ const Banner = () => {
         className="w-full bg-cover "
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="flex flex-col items-center max-w-screen-lg mx-auto md:flex-row h-[450px]">
+        <div className="flex flex-col items-center max-w-screen-lg mx-auto mt-10 md:flex-row">
            {/* section 1  */}
-           <div className="order-2 space-y-6 text-center md:w-6/12 md:order-1 md:text-start md:items-start item-center">
-           <div className="mb-4 text-4xl ">
+           <div className="order-2 space-y-6 md:w-6/12 md:order-1 ">
+           <div className="mx-auto mb-4 text-4xl w-96 md:w-full text-start md:mx-0 ">
             <h1 className="font-bold text-black font-jakarta">
               Upskill from Anywhere with{" "}
               <span className="text-orange-400">Industry-Recognized</span> Learning
             </h1>
           </div>
-          <div className="mt-3 mb-4 text-lg font-jakarta w-96">
+          <div className="mx-auto mt-3 mb-4 text-lg font-jakarta w-96 text-start md:mx-0">
             <p>
               Flexible, accredited courses to help you learn and advance from
               anywhere in the world.

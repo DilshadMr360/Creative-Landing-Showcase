@@ -40,8 +40,8 @@ const AboutUs = () => {
       >
       <div className="max-w-screen-lg mx-auto ">
         <div className="flex items-center justify-center mx-auto mb-10 space-y-10 text-xl font-bold text-center font-jakarta">
-          <div className="flex flex-col items-center justify-center gap-2 mx-auto text-xl font-bold text-center font-jakarta">
-            <h1 className="w-8/12">
+          <div className="flex flex-col items-center justify-center gap-2 mx-auto mt-10 text-xl font-bold text-center font-jakarta">
+            <h1 className="md:w-8/12">
               Our experts design tailored courses to solve workforce challenges
               and drive business success.
             </h1>
@@ -51,7 +51,7 @@ const AboutUs = () => {
         {/* grid */}
 
         {/* Grid Images Section */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mx-5 md:grid-cols-3 md:mx-auto">
           {items.map((item, index) => (
             <div
               key={index}
@@ -81,14 +81,14 @@ const AboutUs = () => {
         </div>
 
               {/* Show More Section */}
-              <div className="flex items-center justify-center gap-5 my-10">
-            <button className="flex items-center justify-center w-40 h-12 gap-2 text-center text-white bg-black rounded-lg">
+              <div className="flex flex-col items-center justify-center gap-5 my-10 md:flex-row">
+            <button className="flex items-center justify-center gap-2 px-4 py-2 text-center text-white bg-black rounded-lg">
               Show More
               <span>
                 <FaArrowRight />
               </span>
             </button>
-            <button className="w-24 h-12 border border-black rounded-lg">
+            <button className="px-4 py-2 border border-black rounded-lg">
               View All
             </button>
           </div>

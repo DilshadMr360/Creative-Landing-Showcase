@@ -18,7 +18,6 @@ import secureCard from "../../assets/secure_card.png";
 import gpay from "../../assets/gpay.png";
 import aPay from "../../assets/a_pay.png";
 
-
 const Footer = () => {
   return (
     <div className="container">
@@ -107,48 +106,48 @@ const Footer = () => {
 
           {/* section 2 */}
 
-          <div className="flex justify-between mt-10 ">
+          <div className="justify-between mt-10 md:flex">
             <div className="flex flex-col space-y-3 ">
               <h1>Choose your preferred language</h1>
               <div className="flex flex-row">
-                 <button className="flex items-center w-40 h-8 text-black bg-white">
-                 <img src={web} alt="Check" />
+                <button className="flex items-center w-40 h-8 text-black bg-white">
+                  <img src={web} alt="Check" />
                   <h1>hello</h1>
-                 </button>
-                <button className="w-40 h-8 text-white bg-black rounded-lg" >Apply</button>
+                </button>
+                <button className="w-40 h-8 text-white bg-black rounded-lg">
+                  Apply
+                </button>
               </div>
             </div>
 
             <div className="flex items-center space-x-4 ">
               <img src={ucas} alt="" />
-              <img src={brand1} alt="" className="w-14 h-14"  />
-              <img src={brand2} alt="" className="w-14 h-14"  />
-              <img src={brand3} alt="" className="w-14 h-14"  />
+              <img src={brand1} alt="" className="w-14 h-14" />
+              <img src={brand2} alt="" className="w-14 h-14" />
+              <img src={brand3} alt="" className="w-14 h-14" />
             </div>
-            
           </div>
           {/* section 2  */}
 
+          {/* section 3 */}
 
-              {/* section 3 */}
-
-              <div className="flex justify-between mt-10">
-            <div className="flex flex-col ">
-              <h1>Copyright © 2015 - 2024 -Global Edulink All rights reserved</h1>
-          
+          <div className="flex flex-col-reverse justify-between w-full mt-10 md:flex-row ">
+            <div className="w-6/12 mx-5 my-5 md:mx-0 ">
+              <h1>
+                Copyright © 2015 - 2024 -Global Edulink All rights reserved
+              </h1>
             </div>
 
-            <div className="flex space-x-8 ">
-              <img src={paypal} alt="" className="h-5 w-14" />
-              <img src={visa} alt="" className="h-5 w-14" />
-              <img src={masterCard} alt="" className="h-5 w-14" />
-              <img src={secureCard} alt="" className="h-5 w-14" />
-              <img src={aPay} alt="" className="h-5 w-14" />
-              <img src={gpay} alt="" className="h-5 w-14" />
+            <div className="grid items-center grid-cols-3 mx-5 space-x-0 space-y-2 md:grid-cols-6 md:mx-0 md:space-x-6">
+              <img src={paypal} alt="" className="w-16 h-8 " />
+              <img src={visa} alt="" className="w-16 h-8 " />
+              <img src={masterCard} alt="" className="w-16 h-8 " />
+              <img src={aPay} alt="" className="w-16 h-8 " />
+              <img src={secureCard} alt="" className="w-16 h-8 " />
+              <img src={gpay} alt="" className="w-16 h-8 " />
             </div>
-            
           </div>
-            {/* section 3  */}
+          {/* section 3  */}
         </div>
       </div>
     </div>
