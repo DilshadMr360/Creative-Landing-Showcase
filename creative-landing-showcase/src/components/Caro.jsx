@@ -22,7 +22,7 @@ const Caro = () => {
 
   return (
     <div className='container'>
-      <div className='max-w-screen-lg mx-auto border border-red-500'>
+      <div className='max-w-screen-lg mx-auto '>
         <div className="flex flex-col items-center">
           {/* Content */}
           <div className="grid grid-cols-4 gap-4 mb-4">

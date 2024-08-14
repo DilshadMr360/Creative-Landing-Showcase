@@ -1,3 +1,4 @@
+import Sample from "./Sample"
 import Caro from "./components/Caro"
 import Slider from "./components/Slider"
 import AboutUs from "./components/aboutus/AboutUs"
@@ -24,6 +25,7 @@ function App() {
      <AboutUs/>
      <Testimonial/>
      <Footer/>
+     <Sample/>
      
     </>
   )
