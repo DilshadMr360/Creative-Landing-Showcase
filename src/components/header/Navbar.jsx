@@ -56,6 +56,7 @@ const Navbar = () => {
 )}
 
 
+
       {/* Main Navbar */}
       <div
         className={`relative flex justify-between max-w-screen-lg mx-auto font-jakarta mt-2 ${

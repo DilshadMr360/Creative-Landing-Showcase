@@ -115,6 +115,7 @@ const Products = () => {
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
         <div className="max-w-screen-lg mt-20 md:mx-auto">
+
           {/* Carousel */}
           <div className="relative flex items-center my-10 md:mx-auto">
             {/* Left Arrow */}
@@ -168,7 +169,7 @@ const Products = () => {
               <FaChevronRight />
             </button>
           </div>
-        
+
 
           {/* Grid Images Section */}
           <div className="max-w-screen-lg p-4 mx-auto overflow-hidden ">

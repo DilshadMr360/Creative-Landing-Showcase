@@ -34,6 +34,7 @@ const Footer = () => {
                 alt=""
                 className="w-40 transition-transform duration-300 hover:scale-105"
               />
+
               <p>
                 Learn Hub offers accessible, high-quality online education for
                 all, with flexible programs tailored to fit into daily life,
@@ -69,11 +70,13 @@ const Footer = () => {
               </div>
 
               <button className="w-full px-4 py-2 font-bold text-white transition-colors duration-300 rounded-lg font-jakarta bg-lGreen hover:bg-green-600">
+
                 Verify your Contacts
               </button>
             </div>
 
             <div className="grid grid-cols-2 gap-10 px-0 md:px-5 md:w-8/12 md:grid-cols-4">
+
               <div className="flex flex-col mt-10 space-y-4 transition-transform duration-300 md:mt-0 hover:scale-105 hover:text-orange-600">
                 <h1 className="font-bold">Resources</h1>
 
@@ -142,6 +145,7 @@ const Footer = () => {
                     <option value="spanish">Spanish</option>
                     <option value="arabic">Arabic</option>
                   </select>
+
                 </button>
                 <button className="h-10 text-white bg-black rounded-lg w-44">
                   Apply
@@ -155,6 +159,7 @@ const Footer = () => {
                 <img src={brand1} alt="" className="w-14 h-14" />
                 <img src={brand2} alt="" className="w-14 h-14" />
               </div>
+
             </div>
           </div>
 
@@ -176,6 +181,7 @@ const Footer = () => {
     <h1>Copyright © 2015 - 2024 - Learn Hub All rights reserved</h1>
   </div>
 </div>
+
 
         </div>
       </div>
