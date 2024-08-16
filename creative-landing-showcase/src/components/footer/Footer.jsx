@@ -25,23 +25,56 @@ const Footer = () => {
         className="flex h-auto bg-cover "
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-        <div className="max-w-screen-lg mx-5 my-10 md:mx-auto font-jakarta ">
+        <div className="max-w-screen-lg mx-10 my-10 md:mx-auto font-jakarta ">
           {/* section  */}
           <div className="flex-row mt-10 md:flex ">
             <div className="space-y-5 md:w-4/12">
-              <img src={f01} alt="" className="w-40 transition-transform duration-300 hover:scale-105" />
+              <img
+                src={f01}
+                alt=""
+                className="w-40 transition-transform duration-300 hover:scale-105"
+              />
               <p>
                 Learn Hub offers accessible, high-quality online education for
                 all, with flexible programs tailored to fit into daily life,
                 empowering learners worldwide to achieve personal and
                 professional goals.
               </p>
+<<<<<<< Updated upstream:creative-landing-showcase/src/components/footer/Footer.jsx
               <div className="flex">
                 <img src={facebook} alt="" />
                 <img src={instargram} alt="" />
                 <img src={xlog} alt="" />
                 <img src={linkedin} alt="" />
                 <img src={youtube} alt="" />
+=======
+              <div className="flex justify-between">
+                <img
+                  src={facebook}
+                  alt=""
+                  className="transition-transform duration-300 hover:scale-150"
+                />
+                <img
+                  src={instargram}
+                  alt=""
+                  className="transition-transform duration-300 hover:scale-150"
+                />
+                <img
+                  src={xlog}
+                  alt=""
+                  className="transition-transform duration-300 hover:scale-150"
+                />
+                <img
+                  src={linkedin}
+                  alt=""
+                  className="transition-transform duration-300 hover:scale-150"
+                />
+                <img
+                  src={youtube}
+                  alt=""
+                  className="transition-transform duration-300 hover:scale-150"
+                />
+>>>>>>> Stashed changes:src/components/footer/Footer.jsx
               </div>
 
               <button className="w-full px-4 py-2 font-bold text-white transition-colors duration-300 rounded-lg font-jakarta bg-lGreen hover:bg-green-600 ">
@@ -49,7 +82,7 @@ const Footer = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-10 px-5 md:w-8/12 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-10 px-0 md:px-5 md:w-8/12 md:grid-cols-4">
               <div className="flex flex-col mt-10 space-y-4 transition-transform duration-300 md:mt-0 hover:scale-105 hover:text-orange-600">
                 <h1 className="font-bold">Resources</h1>
 
@@ -103,20 +136,20 @@ const Footer = () => {
             </div>
           </div>
           {/* section  */}
-          <div className="mx-5 mt-5 md:mx-0">
-          <h1>Choose your Prefer Language</h1>
-          </div>       
+          <div className="mt-5 ">
+            <h1>Choose your Prefer Language</h1>
+          </div>
           <div className="w-full md:flex">
-            <div className="flex mt-10 md:w-4/12">
-              <div className="flex flex-row items-center justify-between w-full mx-5 md:mx-0">
+            <div className="flex mt-10md:w-4/12">
+              <div className="flex flex-row items-center justify-between w-full md:mx-0">
                 <button className="flex items-center w-auto px-3 py-2 text-black bg-white rounded-lg">
-                <img src={web} alt="English" className="w-5 h-5 mr-2" />
-  <select className="w-full text-black bg-white rounded-lg md:py-2 md:px-4">
-    <option value="english">English</option>
-    <option value="russian">Russian</option>
-    <option value="spanish">Spanish</option>
-    <option value="arabic">Arabic</option>
-  </select>
+                  <img src={web} alt="English" className="w-5 h-5 mr-2" />
+                  <select className="w-full text-black bg-white rounded-lg md:py-2 md:px-4">
+                    <option value="english">English</option>
+                    <option value="russian">Russian</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="arabic">Arabic</option>
+                  </select>
                 </button>
                 <button className="h-10 text-white bg-black rounded-lg w-44">
                   Apply
@@ -124,11 +157,12 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex justify-around w-full gap-5 mt-10 md:gap-2 md:justify-end md:w-8/12 md:mt-0 ">
-              <img src={ucas} alt="" className="ml-5 md:ml-0" />
-              <img src={brand1} alt="" className="w-14 h-14" />
-              <img src={brand2} alt="" className="w-14 h-14" />
-              <img src={brand3} alt="" className="w-14 h-14" />
+            <div className="flex items-center justify-between w-full gap-5 mt-10 md:gap-2 md:justify-end md:w-8/12 md:mt-0">
+              <img src={ucas} alt="" className="" />
+              <div className="flex gap-2">
+                <img src={brand1} alt="" className="w-14 h-14" />
+                <img src={brand2} alt="" className="w-14 h-14" />
+              </div>
             </div>
           </div>
 
@@ -139,10 +173,10 @@ const Footer = () => {
           {/* section 3 */}
 
           <div className="w-full md:flex">
-            <div className="mx-5 my-5 md:w-6/12 md:mx-0 ">
+            <div className="my-5 md:w-6/12 ">
               <h1>Copyright © 2015 - 2024 -Learn Hub All rights reserved</h1>
             </div>
-            <div className="flex items-center mx-5 space-x-4 space-y-2 md:justify-end md:w-6/12 md:grid-cols-6 md:mx-0 md:space-x-6 ">
+            <div className="flex items-center space-x-4 space-y-2 md:justify-end md:w-6/12 md:grid-cols-6 md:space-x-6 ">
               <img src={paypal} alt="" className="w-12 h-5 " />
               <img src={visa} alt="" className="w-12 h-5 " />
               <img src={masterCard} alt="" className="w-12 h-5 " />

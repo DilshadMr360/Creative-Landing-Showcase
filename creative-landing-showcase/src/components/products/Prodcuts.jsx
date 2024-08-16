@@ -114,8 +114,9 @@ const Products = () => {
         className="flex h-auto bg-cover"
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-        <div className="max-w-screen-lg mx-auto mt-20 ">
+        <div className="max-w-screen-lg mt-20 md:mx-auto">
           {/* Carousel */}
+<<<<<<< Updated upstream:creative-landing-showcase/src/components/products/Prodcuts.jsx
           <div className="relative flex items-center my-10 border border-red-500 md:mx-auto">
             {/* Left Arrow */}
             <button
@@ -168,6 +169,9 @@ const Products = () => {
               <FaChevronRight />
             </button>
           </div>
+=======
+        
+>>>>>>> Stashed changes:src/components/products/Prodcuts.jsx
 
           {/* Grid Images Section */}
           <div className="max-w-screen-lg p-4 mx-auto overflow-hidden ">

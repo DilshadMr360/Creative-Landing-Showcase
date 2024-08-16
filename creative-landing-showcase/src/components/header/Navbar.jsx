@@ -17,41 +17,44 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      {/* Yellow Background Section */}
-      {isYellowSectionVisible && (
-        <div className="fixed top-0 left-0 z-50 w-full transition-opacity duration-500 ease-in-out bg-dYellow font-outfit">
-          <div className="p-2 text-lg">
-            <div className="flex items-center w-full max-w-screen-lg mx-auto">
-              <div className="flex items-center justify-center w-11/12 space-x-4">
-                <h1 className="font-bold text-dRed">
-                  Renew, Refresh{" "}
-                  <span className="font-bold text-black">24!</span>
-                </h1>
-                <div className="items-center hidden h-6 border border-gray-400 md:block"></div>
-                <div className="flex items-center space-x-20">
-                  <h1>Save up to 40%! Hurry, offer ends June 15th.</h1>
-                  <div>
-                    <button className="flex items-center justify-center w-40 h-10 gap-2 text-center text-white transition-transform duration-300 transform bg-black rounded-lg hover:scale-105">
-                      Claim Offer
-                      <span>
-                        <FaArrowRight />
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-end w-1/12 font-bold">
-                <button
-                  onClick={hideYellowSection}
-                  className="transition-opacity duration-300 hover:text-dRed"
-                >
-                  X
-                </button>
-              </div>
+     {/* Yellow Background Section */}
+{isYellowSectionVisible && (
+  <div className="fixed top-0 left-0 z-50 w-full transition-opacity duration-500 ease-in-out bg-dYellow font-outfit">
+    <div className="p-2 text-lg">
+      <div className="flex flex-col items-center w-full max-w-screen-lg mx-auto md:flex-row">
+        <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:w-11/12 md:space-y-0 md:space-x-4">
+          <h1 className="font-bold text-center md:text-left text-dRed">
+            Renew, Refresh{" "}
+            <span className="font-bold text-black">24!</span>
+          </h1>
+          <div className="items-center hidden h-6 border border-gray-400 md:block"></div>
+          <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-20">
+            <h1 className="text-center md:text-left">
+              Save up to 40%! Hurry, offer ends June 15th.
+            </h1>
+            <div className="text-center md:text-left">
+              <button className="flex items-center justify-center w-40 h-10 gap-2 mx-auto text-white transition-transform duration-300 transform bg-black rounded-lg md:mx-0 hover:scale-105">
+                Claim Offer
+                <span>
+                  <FaArrowRight />
+                </span>
+              </button>
             </div>
           </div>
         </div>
-      )}
+        <div className="flex justify-end mt-4 md:w-1/12 md:mt-0">
+          <button
+            onClick={hideYellowSection}
+            className="transition-opacity duration-300 hover:text-dRed"
+          >
+            X
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
 
       {/* Main Navbar */}
       <div
