@@ -26,20 +26,21 @@ const Banner = () => {
               </p>
             </div>
             <div >
-              {/* Input field and button container */}
-              <div className="flex items-center w-1/2 py-2 transition-shadow duration-300 ease-in-out border rounded-md hover:shadow-lg ">
-                <input
-                  type="text"
-                  placeholder="What will you be learning today?"
-                  className="px-2 py-2 pr-16 text-black placeholder-gray-400 transition-all duration-300 ease-in-out rounded-md"
-                />
-                <div className="flex items-center">
-                  <button className="flex items-center px-4 py-2 mr-2 text-lg text-white transition-transform duration-300 ease-in-out rounded-md bg-lGreen hover:scale-105 hover:bg-green-600">
-                    Explore
-                    <FaBolt className="ml-2 transition-transform duration-300 ease-in-out hover:scale-110" />
-                  </button>
-                </div>
-              </div>
+          {/* Input field and button container */}
+<div className="flex items-center w-full gap-2 py-2 transition-shadow duration-300 ease-in-out border rounded-md hover:shadow-lg md:w-10/12">
+  <input
+    type="text"
+    placeholder="What will you be learning today?"
+    className="w-full px-2 py-2 text-black placeholder-gray-400 transition-all duration-300 ease-in-out rounded-md sm:pr-12"
+  />
+  <div className="flex items-center">
+    <button className="flex items-center px-4 py-2 mr-2 text-lg text-white transition-transform duration-300 ease-in-out rounded-md bg-lGreen hover:scale-105 hover:bg-green-600">
+      Explore
+      <FaBolt className="ml-2 transition-transform duration-300 ease-in-out hover:scale-110" />
+    </button>
+  </div>
+</div>
+
             </div>
           </div>
 
