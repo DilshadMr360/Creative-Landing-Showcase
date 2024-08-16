@@ -25,9 +25,9 @@ const Banner = () => {
                 anywhere in the world.
               </p>
             </div>
-            <div className="max-w-lg w-96">
+            <div >
               {/* Input field and button container */}
-              <div className="flex items-center py-2 transition-shadow duration-300 ease-in-out border rounded-md hover:shadow-lg">
+              <div className="flex items-center w-1/2 py-2 transition-shadow duration-300 ease-in-out border rounded-md hover:shadow-lg ">
                 <input
                   type="text"
                   placeholder="What will you be learning today?"

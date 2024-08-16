@@ -111,10 +111,11 @@ const Products = () => {
   return (
     <div className="container">
       <div
-        className="flex h-auto bg-cover"
+        className="h-auto bg-cover "
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
         <div className="max-w-screen-lg mt-20 md:mx-auto">
+          {/* caro */}
           {/* Carousel */}
           <div className="relative flex items-center w-10/12 mx-auto my-10 md:w-full">
             {/* Left Arrow */}
@@ -169,6 +170,8 @@ const Products = () => {
             </button>
           </div>
 
+          {/* caro */}
+
           {/* Grid Images Section */}
           <div className="max-w-screen-lg p-4 mx-auto overflow-hidden ">
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
@@ -197,12 +200,16 @@ const Products = () => {
                     <h1>{product.description}</h1>
                   </div>
                   <h1>
-                    From <span className="text-xl font-bold">{product.price}</span> /month
+                    From{" "}
+                    <span className="text-xl font-bold">{product.price}</span>{" "}
+                    /month
                   </h1>
                   <div className="flex flex-row items-center justify-between space-x-4 text-sm font-jakarta">
                     <h1 className="flex items-center space-x-2 font-bold font-jakarta">
                       <span>{product.discountedPrice}</span>
-                      <span className="font-normal line-through">{product.originalPrice}</span>
+                      <span className="font-normal line-through">
+                        {product.originalPrice}
+                      </span>
                       <span>in full</span>
                     </h1>
                     <button className="flex items-center space-x-2 font-bold transition-transform duration-300 ease-in-out font-jakarta hover:scale-105">
