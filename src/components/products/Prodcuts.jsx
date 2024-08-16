@@ -114,7 +114,7 @@ const Products = () => {
         className="flex h-auto bg-cover"
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-        <div className="max-w-screen-lg mx-auto mt-20 ">
+        <div className="max-w-screen-lg mt-20 md:mx-auto">
           {/* Carousel */}
           <div className="relative flex items-center w-10/12 mx-auto my-10 md:w-full">
             {/* Left Arrow */}
