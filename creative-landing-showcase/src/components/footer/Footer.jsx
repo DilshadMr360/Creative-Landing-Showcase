@@ -1,5 +1,5 @@
 import React from "react";
-import f01 from "../../assets/F01.png";
+import f01 from "../../assets/logo-01.png";
 import facebook from "../../assets/facebook.png";
 import instargram from "../../assets/Instagram.png";
 import xlog from "../../assets/X.png";
@@ -20,19 +20,19 @@ import aPay from "../../assets/a_pay.png";
 
 const Footer = () => {
   return (
-    <div className="container">
+    <div className="container ">
       <div
         className="flex h-auto bg-cover "
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-        <div className="max-w-screen-lg mx-auto my-10 font-jakarta ">
+        <div className="max-w-screen-lg mx-5 my-10 md:mx-auto font-jakarta ">
           {/* section  */}
           <div className="flex-row mt-10 md:flex ">
-            <div className="space-y-5 md:w-4/12 ">
-              <img src={f01} alt="" />
+            <div className="space-y-5 md:w-4/12">
+              <img src={f01} alt="" className="w-40 transition-transform duration-300 hover:scale-105" />
               <p>
-                Global Edulink offers accessible, high-quality online education
-                for all, with flexible programs tailored to fit into daily life,
+                Learn Hub offers accessible, high-quality online education for
+                all, with flexible programs tailored to fit into daily life,
                 empowering learners worldwide to achieve personal and
                 professional goals.
               </p>
@@ -44,13 +44,13 @@ const Footer = () => {
                 <img src={youtube} alt="" />
               </div>
 
-              <button className="w-full px-4 py-2 font-bold text-white rounded-lg font-jakarta bg-lGreen ">
+              <button className="w-full px-4 py-2 font-bold text-white transition-colors duration-300 rounded-lg font-jakarta bg-lGreen hover:bg-green-600 ">
                 Verify your Contacts
               </button>
             </div>
 
-            <div className="grid grid-cols-2 mx-10 md:w-8/12 md:grid-cols-4">
-              <div className="flex flex-col space-y-4">
+            <div className="grid grid-cols-2 gap-10 px-5 md:w-8/12 md:grid-cols-4">
+              <div className="flex flex-col mt-10 space-y-4 transition-transform duration-300 md:mt-0 hover:scale-105 hover:text-orange-600">
                 <h1 className="font-bold">Resources</h1>
 
                 <div>
@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col mt-10 space-y-4 transition-transform duration-300 md:mt-0 hover:scale-105 hover:text-orange-600">
                 <h1 className="font-bold">Quick Links</h1>
 
                 <div>
@@ -77,7 +77,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col mt-10 space-y-4 transition-transform duration-300 md:mt-0 hover:scale-105 hover:text-orange-600">
                 <h1 className="font-bold">Support</h1>
 
                 <div>
@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col mt-10 space-y-4 transition-transform duration-300 md:mt-0 hover:scale-105 hover:text-orange-600">
                 <h1 className="font-bold">Contact Info</h1>
 
                 <div>
@@ -103,48 +103,52 @@ const Footer = () => {
             </div>
           </div>
           {/* section  */}
-
-          {/* section 2 */}
-
-          <div className="justify-between mt-10 md:flex">
-            <div className="flex flex-col space-y-3 ">
-              <h1>Choose your preferred language</h1>
-              <div className="flex flex-row">
-                <button className="flex items-center w-40 h-8 text-black bg-white">
-                  <img src={web} alt="Check" />
-                  <h1>hello</h1>
+          <div className="mx-5 mt-5 md:mx-0">
+          <h1>Choose your Prefer Language</h1>
+          </div>       
+          <div className="w-full md:flex">
+            <div className="flex mt-10 md:w-4/12">
+              <div className="flex flex-row items-center justify-between w-full mx-5 md:mx-0">
+                <button className="flex items-center w-auto px-3 py-2 text-black bg-white rounded-lg">
+                <img src={web} alt="English" className="w-5 h-5 mr-2" />
+  <select className="w-full text-black bg-white rounded-lg md:py-2 md:px-4">
+    <option value="english">English</option>
+    <option value="russian">Russian</option>
+    <option value="spanish">Spanish</option>
+    <option value="arabic">Arabic</option>
+  </select>
                 </button>
-                <button className="w-40 h-8 text-white bg-black rounded-lg">
+                <button className="h-10 text-white bg-black rounded-lg w-44">
                   Apply
                 </button>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 ">
-              <img src={ucas} alt="" />
+            <div className="flex justify-around w-full gap-5 mt-10 md:gap-2 md:justify-end md:w-8/12 md:mt-0 ">
+              <img src={ucas} alt="" className="ml-5 md:ml-0" />
               <img src={brand1} alt="" className="w-14 h-14" />
               <img src={brand2} alt="" className="w-14 h-14" />
               <img src={brand3} alt="" className="w-14 h-14" />
             </div>
           </div>
+
+          {/* section 2 */}
+
           {/* section 2  */}
 
           {/* section 3 */}
 
-          <div className="flex flex-col-reverse justify-between w-full mt-10 md:flex-row ">
-            <div className="w-6/12 mx-5 my-5 md:mx-0 ">
-              <h1>
-                Copyright © 2015 - 2024 -Global Edulink All rights reserved
-              </h1>
+          <div className="w-full md:flex">
+            <div className="mx-5 my-5 md:w-6/12 md:mx-0 ">
+              <h1>Copyright © 2015 - 2024 -Learn Hub All rights reserved</h1>
             </div>
-
-            <div className="grid items-center grid-cols-3 mx-5 space-x-0 space-y-2 md:grid-cols-6 md:mx-0 md:space-x-6">
-              <img src={paypal} alt="" className="w-16 h-8 " />
-              <img src={visa} alt="" className="w-16 h-8 " />
-              <img src={masterCard} alt="" className="w-16 h-8 " />
-              <img src={aPay} alt="" className="w-16 h-8 " />
-              <img src={secureCard} alt="" className="w-16 h-8 " />
-              <img src={gpay} alt="" className="w-16 h-8 " />
+            <div className="flex items-center mx-5 space-x-4 space-y-2 md:justify-end md:w-6/12 md:grid-cols-6 md:mx-0 md:space-x-6 ">
+              <img src={paypal} alt="" className="w-12 h-5 " />
+              <img src={visa} alt="" className="w-12 h-5 " />
+              <img src={masterCard} alt="" className="w-12 h-5 " />
+              <img src={aPay} alt="" className="w-12 h-5 " />
+              <img src={secureCard} alt="" className="w-12 h-5 " />
+              <img src={gpay} alt="" className="w-12 h-5 " />
             </div>
           </div>
           {/* section 3  */}

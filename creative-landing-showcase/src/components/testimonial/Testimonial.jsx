@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import backgroundImage2 from "../../assets/testimonail-bg.png";
-import t1 from "../../assets/t1.png";
-import t2 from "../../assets/t2.png";
-import t3 from "../../assets/t3.png";
-import t4 from "../../assets/t4.png";
-import t5 from "../../assets/t5.png";
-import t6 from "../../assets/t6.png";
-import t7 from "../../assets/t7.png";
-import t8 from "../../assets/t8.png";
+import t1 from "../../assets/up1.png";
+import t2 from "../../assets/up5.png";
+import t3 from "../../assets/up3.png";
+import t4 from "../../assets/up4.png";
+import t5 from "../../assets/up5.png";
+import t6 from "../../assets/up1.png";
+import t7 from "../../assets/up5.png";
+import t8 from "../../assets/up3.png";
 import stars from "../../assets/stars.png";
 import coma from "../../assets/coma.png";
 
@@ -19,7 +19,7 @@ const Testimonial = () => {
       title: "Steven",
       country: "United Kingdom",
       description:
-        "Massive shout out out to Ashley from the Mentor Support Service. Ashley provided lots of important advice",
+        "Massive shout out to Ashley from the Mentor Support Service. Ashley provided lots of important advice",
       img2: stars,
       bg: "bg-blue-200",
     },
@@ -30,7 +30,7 @@ const Testimonial = () => {
       description:
         "Gain essential business skills with our Ofqual-regulated Business and Management Training.",
       img2: stars,
-      bg: "bg-yellow-100", 
+      bg: "bg-yellow-100",
     },
     {
       img: t3,
@@ -39,8 +39,7 @@ const Testimonial = () => {
       description:
         "Enhance your teaching career with accredited courses for diverse, rewarding opportunities.",
       img2: stars,
-      bg: "bg-yellow-300", 
-
+      bg: "bg-yellow-300",
     },
     {
       img: t4,
@@ -49,7 +48,7 @@ const Testimonial = () => {
       description:
         "Gain comprehensive accounting skills with accredited courses covering finance, taxes, and software.",
       img2: stars,
-      bg: "bg-blue-200", 
+      bg: "bg-blue-200",
     },
     {
       img: t5,
@@ -58,7 +57,7 @@ const Testimonial = () => {
       description:
         "Gain comprehensive accounting skills with accredited courses covering finance, taxes, and software.",
       img2: stars,
-      bg: "bg-yellow-200", 
+      bg: "bg-yellow-200",
     },
     {
       img: t6,
@@ -67,7 +66,7 @@ const Testimonial = () => {
       description:
         "Gain comprehensive accounting skills with accredited courses covering finance, taxes, and software.",
       img2: stars,
-      bg: "bg-yellow-300", 
+      bg: "bg-yellow-300",
     },
     {
       img: t7,
@@ -76,7 +75,7 @@ const Testimonial = () => {
       description:
         "Gain comprehensive accounting skills with accredited courses covering finance, taxes, and software.",
       img2: stars,
-      bg: "bg-teal-500", 
+      bg: "bg-teal-500",
     },
     {
       img: t8,
@@ -85,7 +84,7 @@ const Testimonial = () => {
       description:
         "Gain comprehensive accounting skills with accredited courses covering finance, taxes, and software.",
       img2: stars,
-      bg: "bg-orange-500", 
+      bg: "bg-orange-500",
     },
   ];
 
@@ -136,12 +135,11 @@ const Testimonial = () => {
       </div>
 
       {/* Testimonial */}
-
       <div
-        className="flex h-auto bg-cover "
+        className="flex h-auto bg-cover"
         style={{ backgroundImage: `url(${backgroundImage2})` }}
       >
-        <div className="flex flex-col items-center max-w-screen-lg mx-auto mt-20 ">
+        <div className="flex flex-col items-center max-w-screen-lg mx-auto mt-20">
           {/* Content */}
           <div className="grid w-full grid-cols-1 gap-4 mb-4 md:grid-cols-4">
             {/* Loop through items */}
@@ -150,7 +148,7 @@ const Testimonial = () => {
               .map((item, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col p-4 space-y-8 rounded-lg font-jakarta ${item.bg}`} // Apply background color from item object
+                  className={`flex flex-col p-4 space-y-8 rounded-lg font-jakarta md:mx-0 mx-5 ${item.bg} transition-transform duration-300 ease-in-out transform hover:scale-105`}
                 >
                   <div className="flex items-center gap-2">
                     <img src={item.img} alt="" className="w-16" />
@@ -167,9 +165,9 @@ const Testimonial = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex items-center justify-between w-full max-w-xs ">
+          <div className="flex items-center justify-between w-full max-w-xs my-5">
             <button
-              className="p-2 text-black bg-white rounded-full disabled:opacity-50"
+              className="p-2 text-black transition-transform duration-300 ease-in-out bg-white rounded-full disabled:opacity-50 hover:scale-110"
               onClick={handlePrev}
               disabled={currentIndex === 0}
             >
@@ -185,7 +183,7 @@ const Testimonial = () => {
             </div>
 
             <button
-              className="p-2 text-black bg-white rounded-full disabled:opacity-50"
+              className="p-2 text-black transition-transform duration-300 ease-in-out bg-white rounded-full disabled:opacity-50 hover:scale-110"
               onClick={handleNext}
               disabled={currentIndex + itemsPerPage >= totalItems}
             >

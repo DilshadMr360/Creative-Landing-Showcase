@@ -25,7 +25,6 @@ function App() {
      <AboutUs/>
      <Testimonial/>
      <Footer/>
-     <Sample/>
      
     </>
   )
