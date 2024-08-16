@@ -36,12 +36,12 @@ const Footer = () => {
                 empowering learners worldwide to achieve personal and
                 professional goals.
               </p>
-              <div className="flex">
-                <img src={facebook} alt="" />
-                <img src={instargram} alt="" />
-                <img src={xlog} alt="" />
-                <img src={linkedin} alt="" />
-                <img src={youtube} alt="" />
+              <div className="flex justify-between">
+                <img src={facebook} alt="" className="transition-transform duration-300 hover:scale-150"  />
+                <img src={instargram} alt="" className="transition-transform duration-300 hover:scale-150" />
+                <img src={xlog} alt=""  className="transition-transform duration-300 hover:scale-150" />
+                <img src={linkedin} alt="" className="transition-transform duration-300 hover:scale-150"  />
+                <img src={youtube} alt="" className="transition-transform duration-300 hover:scale-150"  />
               </div>
 
               <button className="w-full px-4 py-2 font-bold text-white transition-colors duration-300 rounded-lg font-jakarta bg-lGreen hover:bg-green-600 ">

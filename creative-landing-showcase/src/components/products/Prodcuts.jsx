@@ -116,7 +116,7 @@ const Products = () => {
       >
         <div className="max-w-screen-lg mx-auto mt-20 ">
           {/* Carousel */}
-          <div className="relative flex items-center my-10 border border-red-500 md:mx-auto">
+          <div className="relative flex items-center my-10 md:mx-auto">
             {/* Left Arrow */}
             <button
               className="absolute left-0 z-20 p-2 text-white transition-transform duration-300 ease-in-out bg-black rounded-full hover:scale-110"
